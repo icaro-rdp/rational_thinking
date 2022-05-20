@@ -1,27 +1,17 @@
-h3{
-    font-size: 4rem;
-    text-transform: uppercase;
-    color:white;
+.header-blu{ 
+    
+    background-color: rgb(30 58 138);
+
+        clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% 0%,
+            0% 100%
+        );
+        
 }
-h1{
-    font-size:3rem;
-    color:wheat;
-}
-.container{
-    height: 100vh;
-    width: 100%;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    background: url(../assets/images/Salon_de_Madame_Geoffrin.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.content{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    width: max-content;
+
+.header-blu:hover{
+    background-color: rgb(59, 97, 199);
+    
 }
