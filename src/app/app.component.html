@@ -1,15 +1,24 @@
-<div class="header-blu w-full h-screen flex justify-start">
-  <div class="mt-8 flex flex-col gap-4 w-full">
-    <div class="ml-8 flex flex-col">
-      <div
-        class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-100 uppercase font-extrabold text-3xl"
-      >
-        Rational Thinking
+<div class="header w-full h-screen flex justify-start">
+  <div class="navbar shadow-xl flex sticky h-12 w-full">
+    <div
+      class="w-11/12 text-center h-full bg-clip-text text-transparent bg-gradient-to-r text-pink-600 uppercase font-extrabold text-3xl"
+    >
+      <div class="w-full h-full flex justify-start pl-[30%] gap-4">
+        <div>Rational</div>
+        <div>Thinking</div>
       </div>
+    </div>
+    <div (click)="openMenu()" class="flex justify-center relative w-1/12">
+      <img class="h-full w-2/3" src="../assets/images/svg/menu.svg" />
       <div
-        class="bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-violet-100 font-bold"
+        *ngIf="menuStatus"
+        class="top-12 h-24 w-fill absolute z-10 border border-black rounded"
       >
-        Work in progress...
+        <ul class="w-fill">
+          <li>1. One</li>
+          <li>2. Two</li>
+          <li>3. Three</li>
+        </ul>
       </div>
     </div>
   </div>

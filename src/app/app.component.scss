@@ -1,17 +1,6 @@
-.header-blu{ 
-    
-    background-color: rgb(30 58 138);
 
-        clip-path: polygon(
-            0% 0%,
-            100% 0%,
-            100% 0%,
-            0% 100%
-        );
-        
-}
-
-.header-blu:hover{
-    background-color: rgb(59, 97, 199);
-    
+.navbar{
+    background-image: url("../assets/images/navbar.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
