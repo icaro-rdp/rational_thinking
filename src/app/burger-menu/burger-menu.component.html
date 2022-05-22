@@ -1,0 +1,12 @@
+<div
+  class="blur-2x w-full h-full flex justify-center align-middle items-center"
+>
+  <div class="flex w-1/2 text-center flex-col text-4xl gap-4">
+    <label
+      *ngFor="let item of menu"
+      class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-semibold font-mono transition ease-in-out delay-75 hover:translate-x-4 hover:skew-y-2 hover:scale-105 hover:duration-150"
+    >
+      {{ item.name | titlecase }}</label
+    >
+  </div>
+</div>

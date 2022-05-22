@@ -1,24 +1,22 @@
 <div class="header w-full h-screen flex justify-start">
-  <div class="navbar shadow-xl flex sticky h-12 w-full">
+  <div class="navbar shadow-xl flex sticky h-16 w-full">
     <div
       class="w-11/12 text-center h-full bg-clip-text text-transparent bg-gradient-to-r text-pink-600 uppercase font-extrabold text-3xl"
-    >
-      <div class="w-full h-full flex justify-start pl-[30%] gap-4">
-        <div>Rational</div>
-        <div>Thinking</div>
-      </div>
-    </div>
-    <div (click)="openMenu()" class="flex justify-center relative w-1/12">
-      <img class="h-full w-2/3" src="../assets/images/svg/menu.svg" />
+    ></div>
+    <div (click)="openMenu()" class="flex justify-center w-1/12">
+      <img
+        class="z-30 h-full w-2/3"
+        [src]="
+          !menuStatus
+            ? '../assets/images/svg/menu.svg'
+            : '../assets/images/svg/close.svg'
+        "
+      />
       <div
         *ngIf="menuStatus"
-        class="top-12 h-24 w-fill absolute z-10 border border-black rounded"
+        class="menu shadow-xl h-screen absolute inset-0 border-0"
       >
-        <ul class="w-fill">
-          <li>1. One</li>
-          <li>2. Two</li>
-          <li>3. Three</li>
-        </ul>
+        <app-burger-menu></app-burger-menu>
       </div>
     </div>
   </div>

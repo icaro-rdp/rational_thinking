@@ -10,6 +10,7 @@ export class AppComponent {
   navbar_background = '../assets/images/navbar.jpg';
   menuStatus: boolean = false;
 
+  // open and close burger menu
   openMenu() {
     this.menuStatus = !this.menuStatus;
   }
