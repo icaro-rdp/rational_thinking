@@ -5,11 +5,11 @@ interface Menu {
   name: string;
 }
 @Component({
-  selector: 'app-burger-menu',
-  templateUrl: './burger-menu.component.html',
-  styleUrls: ['./burger-menu.component.scss'],
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss'],
 })
-export class BurgerMenuComponent implements OnInit {
+export class MenuComponent implements OnInit {
   @Input() isOpen = true;
 
   toggle() {

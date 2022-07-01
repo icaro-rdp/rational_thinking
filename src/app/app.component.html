@@ -1,23 +1,14 @@
 <div class="header w-full h-screen flex justify-start">
   <div class="navbar shadow-xl flex sticky h-16 w-full">
-    <div
-      class="w-11/12 text-center h-full bg-clip-text text-transparent bg-gradient-to-r text-pink-600 uppercase font-extrabold text-3xl"
-    ></div>
-    <div (click)="openMenu()" class="flex justify-center w-1/12">
-      <img
-        class="z-30 h-full w-2/3"
-        [src]="
-          !menuStatus
-            ? '../assets/images/svg/menu.svg'
-            : '../assets/images/svg/close.svg'
-        "
-      />
+    <div class="w-11/12"></div>
+    <button (click)="openMenu()" class="flex justify-center w-1/12">
+      <app-burger [isOpen]="menuStatus"></app-burger>
       <div
         *ngIf="menuStatus"
         class="menu shadow-xl h-screen absolute inset-0 border-0"
       >
-        <app-burger-menu></app-burger-menu>
+        <app-menu></app-menu>
       </div>
-    </div>
+    </button>
   </div>
 </div>
