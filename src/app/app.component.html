@@ -1,7 +1,7 @@
 <div class="header w-full h-screen flex justify-start">
-  <div class="navbar shadow-xl flex sticky h-16 w-full">
-    <div class="w-11/12"></div>
-    <button (click)="openMenu()" class="flex justify-center w-1/12">
+  <div class="bg-blue shadow-xl flex sticky h-16 w-full">
+    <div class="text-yellow w-11/12">Rationality is the key</div>
+    <button (click)="openMenu()" class="flex justify-end w-1/12">
       <app-burger [isOpen]="menuStatus"></app-burger>
       <div
         *ngIf="menuStatus"
