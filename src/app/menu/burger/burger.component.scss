@@ -1,0 +1,52 @@
+@import "colors";
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 64px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+.btn-burger {
+  position: absolute;
+  background-color: $yellow;
+  width: 50px;
+  height: 4px;
+  border-radius: 4px;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-burger::before,
+.btn-burger::after {
+  content: "";
+  position: absolute;
+  background-color: $yellow;
+  right: 0px;
+  width: 50px;
+  height: 4px;
+  border-radius: 4px;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-burger::before {
+  transform: translateY(-14px);
+}
+.btn-burger::after {
+  transform: translateY(14px);
+}
+
+.open .btn-burger {
+  transform: translateX(-64px);
+  background: transparent;
+}
+.open .btn-burger::before {
+  transform: rotate(45deg) translate(45px, -45px);
+  background-color: $yellow;
+}
+.open .btn-burger::after {
+  transform: rotate(-45deg) translate(45px, 45px);
+  background-color: $yellow;
+}

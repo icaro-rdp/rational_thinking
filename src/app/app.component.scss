@@ -1,27 +1,31 @@
-h3{
-    font-size: 4rem;
-    text-transform: uppercase;
-    color:white;
+/** LIGHT THEME */
+$blue: #010440;
+$light-blue: #2d3340;
+$dark-lime: #6a8c20;
+$lime: #bff205;
+$yellow: #d7f205;
+
+@import "https://fonts.googleapis.com/css?family=Trispace:300,400,600,700";
+@keyframes text-top {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(400px) translateY(-300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
 }
-h1{
-    font-size:3rem;
-    color:wheat;
+.entrance-animation {
+  animation: text-top 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
-.container{
-    height: 100vh;
-    width: 100%;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    background: url(../assets/images/Salon_de_Madame_Geoffrin.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.content{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    width: max-content;
+.text {
+  font-family: "Trispace", sans-serif;
+  height: 100%;
+  font-size: 2.5em;
+  font-weight: 900;
 }
