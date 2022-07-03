@@ -1,3 +1,4 @@
+@import "colors";
 .menu-btn {
   position: relative;
   display: flex;
@@ -11,7 +12,7 @@
 }
 .btn-burger {
   position: absolute;
-
+  background-color: $lime;
   width: 50px;
   height: 4px;
   border-radius: 4px;
@@ -22,7 +23,7 @@
 .btn-burger::after {
   content: "";
   position: absolute;
-
+  background-color: $lime;
   right: 0px;
   width: 50px;
   height: 4px;
@@ -43,7 +44,9 @@
 }
 .open .btn-burger::before {
   transform: rotate(45deg) translate(45px, -45px);
+  background-color: $blue;
 }
 .open .btn-burger::after {
   transform: rotate(-45deg) translate(45px, 45px);
+  background-color: $blue;
 }

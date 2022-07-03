@@ -2,19 +2,18 @@ import { Component, OnInit, Input } from '@angular/core';
 
 interface Menu {
   id: number;
-  name: string;
+  name: MenuType;
 }
+type MenuType = 'about me' | 'progect goals' | 'contact' | 'protfolio';
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
-  @Input() isOpen = true;
+  @Input() isOpen = false;
 
-  toggle() {
-    this.isOpen = !this.isOpen;
-  }
   constructor() {}
   menu: Menu[] = [
     { id: 1, name: 'about me' },

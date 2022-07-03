@@ -1,12 +1,12 @@
 <div
-  class="bg-animated bg-light-blue blur-2x w-full h-full flex justify-center align-middle items-center"
+  class="bg-animated bg-gradient-to-bl from-dark-lime to-yellow via-lime opacity-1 w-full h-full flex justify-center align-middle items-center"
 >
-  <div class="flex w-fit text-center flex-col text-4xl gap-4">
+  <div class="bg-animated-text flex w-fit text-center flex-col text-4xl gap-4">
     <label
       *ngFor="let item of menu"
-      class="cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-dark-lime via-lime to-yellow font-semibold font-mono transition ease-in-out delay-75 hover:translate-x-4 hover:skew-y-2 hover:scale-105 hover:duration-200"
+      class="cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-blue to-light-blue font-semibold font-mono transition ease-in-out delay-75 hover:odd:translate-x-4 hover:even:-translate-x-4 hover:odd:skew-y-2 hover:even:-skew-y-2 hover:scale-105 hover:duration-200"
     >
-      {{ item.name | titlecase }}</label
-    >
+      {{ item.name | titlecase }}
+    </label>
   </div>
 </div>
