@@ -1,0 +1,11 @@
+@import "colors";
+
+article img {
+  border-bottom: 4px solid $blue;
+  filter: grayscale(100%);
+
+  &:hover {
+    border-bottom: 4px solid $yellow;
+    filter: grayscale(0%);
+  }
+}

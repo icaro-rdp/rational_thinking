@@ -34,7 +34,7 @@
   z-index: 20;
 }
 .arrow::after {
-  transform: translate(calc(-6.5px + 10px), -2.5px) rotate(-45deg);
+  transform: translate(calc(-5.5px + 10px), -3px) rotate(-45deg);
 }
 .arrow::before {
   transform: translate(calc(7px - 15px), -3px) rotate(45deg);
