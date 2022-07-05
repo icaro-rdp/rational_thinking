@@ -7,6 +7,8 @@ import { BurgerComponent } from './shared/burger/burger.component';
 import { MenuComponent } from './menu/menu.component';
 import { TopScrollerComponent } from './shared/top-scroller/top-scroller.component';
 import { ArticleComponent } from './shared/article/article.component';
+import { ArticlesDisplayerComponent } from './shared/articles-displayer/articles-displayer.component';
+import { ContentfulService } from './services/contentful.service';
 
 @NgModule({
   declarations: [
@@ -15,9 +17,10 @@ import { ArticleComponent } from './shared/article/article.component';
     BurgerComponent,
     TopScrollerComponent,
     ArticleComponent,
+    ArticlesDisplayerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  providers: [ContentfulService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

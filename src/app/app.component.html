@@ -1,10 +1,21 @@
 <div class="relative header w-full h-screen justify-start">
-  <div class="bg-blue shadow-xl flex sticky h-16 w-full">
+  <div class="bg-blue shadow-xl flex sticky h-20 w-full">
     <div
-      class="flex gap-4 justify-center entrance-animation text text-yellow w-full"
+      class="relative flex flex-col entrance-animation text text-yellow w-full"
     >
-      <label>Rationality is the</label>
-      <label>key</label>
+      <div class="flex justify-center w-full align-top">
+        <label>RATI</label>
+        <img
+          src="../assets/images/brainLogo.png"
+          alt="logo"
+          class="animate-pulse relative top-2 w-10 h-10"
+        />
+        <label>NALITY</label>
+      </div>
+      <label
+        class="relative -top-2 flex justify-center w-full text-xs text-left text-lime"
+        >Rationality is the Key</label
+      >
     </div>
     <button
       (click)="openMenu()"
@@ -22,13 +33,7 @@
     *ngIf="!menuStatus"
     class="bg-transparent grid place-items-center text-4xl text-blue flex sticky h-full w-full"
   >
-    <label class="max-w-[80%]">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6">
-        <div *ngFor="let item of articles">
-          <app-article [article]="item"></app-article>
-        </div>
-      </div>
-    </label>
+    <app-articles-displayer> </app-articles-displayer>
   </div>
 </div>
 

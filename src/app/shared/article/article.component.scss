@@ -1,8 +1,15 @@
 @import "colors";
 
+article {
+  transition: all 0.3s ease-in-out;
+}
+article:hover {
+  transform: scale(1.05);
+  transform: translateY(-5px);
+}
 article img {
   border-bottom: 4px solid $blue;
-  filter: grayscale(100%);
+  filter: grayscale(80%);
 
   &:hover {
     border-bottom: 4px solid $yellow;
