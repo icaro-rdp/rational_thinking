@@ -1,0 +1,41 @@
+@import "colors";
+
+.arrow-container {
+  background-color: $light-blue;
+
+  &:hover {
+    background-color: $blue;
+  }
+}
+.arrow {
+  background-color: $lime;
+  position: relative;
+  top: 0%;
+  width: 5px;
+  height: 2rem;
+  border-radius: 5px;
+  z-index: 20;
+}
+.arrow-container:hover .arrow,
+.arrow-container:hover .arrow::before,
+.arrow-container:hover .arrow::after {
+  background-color: $yellow;
+}
+
+.arrow::after,
+.arrow::before {
+  content: "";
+  background-color: $lime;
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 1.25rem;
+  border-radius: 5px;
+  z-index: 20;
+}
+.arrow::after {
+  transform: translate(calc(-6px + 10px), -3px) rotate(-45deg);
+}
+.arrow::before {
+  transform: translate(calc(7px - 15px), -3px) rotate(45deg);
+}
