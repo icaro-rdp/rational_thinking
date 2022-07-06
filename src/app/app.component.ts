@@ -8,7 +8,6 @@ import { article } from './shared/article/article.component';
 })
 export class AppComponent {
   title = 'rational_thinking';
-  navbar_background = '../assets/images/navbar.jpg';
   menuStatus: boolean = false;
 
   articles: article[] = [

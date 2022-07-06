@@ -1,15 +1,11 @@
 @import "colors";
 
 .arrow-container {
-  background-color: $light-blue;
-
   &:hover {
     transform: scale3d(0.95, 0.95, 1);
-    background-color: $blue;
   }
 }
 .arrow {
-  background-color: $lime;
   position: relative;
   top: 0%;
   width: 5px;
@@ -17,16 +13,11 @@
   border-radius: 5px;
   z-index: 20;
 }
-.arrow-container:hover .arrow,
-.arrow-container:hover .arrow::before,
-.arrow-container:hover .arrow::after {
-  background-color: $yellow;
-}
 
 .arrow::after,
 .arrow::before {
   content: "";
-  background-color: $lime;
+
   position: absolute;
   top: 0;
   width: 4px;
