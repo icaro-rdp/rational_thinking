@@ -4,6 +4,7 @@
   background-color: $light-blue;
 
   &:hover {
+    transform: scale3d(0.95, 0.95, 1);
     background-color: $blue;
   }
 }
@@ -34,7 +35,7 @@
   z-index: 20;
 }
 .arrow::after {
-  transform: translate(calc(-6.5px + 10px), -2.5px) rotate(-45deg);
+  transform: translate(calc(-6px + 10px), -3px) rotate(-45deg);
 }
 .arrow::before {
   transform: translate(calc(7px - 15px), -3px) rotate(45deg);
