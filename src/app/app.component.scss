@@ -20,7 +20,16 @@ $yellow: #d7f205;
     opacity: 1;
   }
 }
-.entrance-animation {
+.entrance-subtext {
+  animation: text-top 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+.entrance-text {
+  animation: text-top 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+.entrance-button {
+  animation: text-top 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+.entrance-icon {
   animation: text-top 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 .text {
@@ -28,4 +37,15 @@ $yellow: #d7f205;
   height: 100%;
   font-size: 2.5em;
   font-weight: 900;
+}
+
+.closed {
+  transform: translate(100%, 0%);
+}
+.navbar.open {
+  transform: translateX(0);
+}
+
+.navbar {
+  transition: all 0.3s ease-in-out;
 }

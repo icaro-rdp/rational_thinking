@@ -1,5 +1,6 @@
 <div
-  class="bg-animated bg-gradient-to-bl from-light-blue to-blue opacity-1 w-full h-full flex justify-center align-middle items-center"
+  [ngClass]="isOpen ? 'open' : 'closed'"
+  class="bg-blue menu h-screen w-screen top-0 right-0 flex justify-center align-middle items-center"
 >
   <ul class="flex w-fit text-center flex-col text-4xl gap-4">
     <li

@@ -1,50 +1,15 @@
-@-webkit-keyframes scale-in-tr {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 100% 0;
-    transform-origin: 100% 0;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 100% 0;
-    transform-origin: 100% 0;
-    opacity: 1;
-  }
+@import "colors";
+
+.closed {
+  visibility: hidden;
+  transform: translate(100%, 0%);
 }
-@keyframes scale-in-tr {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 100% 0;
-    transform-origin: 100% 0;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 100% 0;
-    transform-origin: 100% 0;
-    opacity: 1;
-  }
-}
-.bg-animated {
-  -webkit-animation: scale-in-tr 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-    forwards;
-  animation: scale-in-tr 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
-}
-.bg-animated-back {
-  -webkit-animation: scale-in-tr 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-    forwards;
-  animation: scale-in-tr 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) reverse
-    forwards;
+.menu.open {
+  visibility: visible;
+  transform: translateX(0);
 }
 
-.bg-animated-text {
-  animation: bg-opacity 1s linear;
-}
-.bg-animated-text-back {
-  animation: bg-opacity 1s linear reverse;
+.menu {
+  z-index: 50;
+  transition: all 0.3s ease-in-out;
 }

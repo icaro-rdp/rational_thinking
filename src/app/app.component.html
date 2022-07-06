@@ -1,45 +1,48 @@
-<div
-  class="bg-blue md:bg-blue md:bg-opacity-10 relative header w-full h-full justify-start"
->
+<div>
+  <div class="w-full h-full fixed">
+    <app-menu [isOpen]="menuStatus"></app-menu>
+  </div>
   <div
-    class="z-50 bg-transparent md:bg-blue shadow-sm md:shadow-xl flex sticky md:fixed h-20 w-full"
+    class="relative md:bg-blue md:bg-opacity-10 relative header w-full h-full justify-start"
   >
-    <div
-      class="relative flex flex-col entrance-animation text text-yellow w-full"
-    >
-      <div class="flex justify-left md:justify-center w-full align-top">
-        <label class="hidden md:block">RATI</label>
-        <img
-          src="../assets/images/brainLogo.png"
-          alt="logo"
-          class="animate-pulse relative top-2 -right-4 md:right-0 w-16 h-16 md:w-10 md:h-10 lg:w-10 lg:h-10"
-        />
-        <label class="hidden md:block">NALITY</label>
-      </div>
-      <label
-        class="hidden md:flex relative -top-2 flex justify-center w-full text-xs text-left text-lime"
-        >Rationality is the Key</label
+    <div class="z-50 bg-transparent flex sticky md:fixed h-20 w-full">
+      <div
+        [ngClass]="!menuStatus ? 'open' : ' closed'"
+        class="navbar bg-blue relative flex flex-col text text-yellow w-full"
       >
-    </div>
-    <button
-      (click)="openMenu()"
-      class="h-full absolute right-0 flex justify-end"
-    >
-      <div class="z-50 entrance-animation">
-        <app-burger [isOpen]="menuStatus"></app-burger>
+        <div class="flex justify-left md:justify-center w-full align-top">
+          <label class="entrance-text hidden md:block">RATI</label>
+          <img
+            src="../assets/images/brainLogo.png"
+            alt="logo"
+            class="animate-pulse entrance-icon relative top-2 -right-4 md:right-0 w-16 h-16 md:w-10 md:h-10 lg:w-10 lg:h-10"
+          />
+          <label class="entrance-text hidden md:block">NALITY</label>
+        </div>
+        <label
+          class="entrance-subtext hidden md:flex relative -top-2 flex justify-center w-full text-xs text-left text-lime"
+          >Rationality is the Key</label
+        >
       </div>
-    </button>
-    <div *ngIf="menuStatus" class="menu h-screen absolute inset-0 border-0">
-      <app-menu [isOpen]="menuStatus"></app-menu>
+      <button
+        (click)="openMenu()"
+        class="h-full absolute right-0 flex justify-end"
+      >
+        <div class="entrance-button z-50">
+          <app-burger [isOpen]="menuStatus"></app-burger>
+        </div>
+      </button>
+    </div>
+    <div
+      *ngIf="!menuStatus"
+      class="z-50 md:z-0 bg-blue md:bg-transparent grid place-items-center text-4xl text-blue flex sticky h-full w-full"
+    >
+      <app-articles-displayer> </app-articles-displayer>
     </div>
   </div>
   <div
-    class="bg-transparent grid place-items-center text-4xl text-blue flex sticky h-full w-full"
+    class="z-50 fixed bottom-0 right-0 w-[80px] grid place-items-center py-8"
   >
-    <app-articles-displayer> </app-articles-displayer>
+    <app-top-scroller></app-top-scroller>
   </div>
-</div>
-
-<div class="fixed bottom-0 right-0 w-[80px] grid place-items-center py-8">
-  <app-top-scroller></app-top-scroller>
 </div>
