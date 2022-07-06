@@ -1,7 +1,9 @@
 <button *ngIf="isScrolled" (click)="scrollToTop()">
   <div
-    class="z-10 arrow-container grid place-content-center shadow-xl rounded-full w-16 h-16 hover:scale"
+    class="bg-lime hover:bg-yellow md:bg-light-blue md:hover:bg-blue z-10 arrow-container grid place-content-center shadow-xl rounded-full w-16 h-16 hover:scale"
   >
-    <div class="arrow"></div>
+    <div
+      class="md:bg-yellow md:after:bg-yellow md:before:bg-yellow bg-blue after:bg-blue before:bg-blue arrow"
+    ></div>
   </div>
 </button>
