@@ -3,6 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 interface Menu {
   id: number;
   name: MenuType;
+  link: string;
 }
 type MenuType = 'about me' | 'progect goals' | 'contact' | 'protfolio';
 
@@ -16,10 +17,10 @@ export class MenuComponent implements OnInit {
 
   constructor() {}
   menu: Menu[] = [
-    { id: 1, name: 'about me' },
-    { id: 2, name: 'progect goals' },
-    { id: 3, name: 'contact' },
-    { id: 4, name: 'protfolio' },
+    { id: 1, name: 'about me', link: 'about-me' },
+    { id: 2, name: 'progect goals', link: 'project-goals' },
+    { id: 3, name: 'contact', link: 'contact' },
+    { id: 4, name: 'protfolio', link: 'protfolio' },
   ];
 
   ngOnInit() {}

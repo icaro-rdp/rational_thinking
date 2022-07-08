@@ -1,4 +1,7 @@
-<div class="relative flex flex-col max-w-6xl pb-14 px-4 md:py-14">
+<div
+  *ngIf="articles$ | async as articles"
+  class="relative flex flex-col max-w-6xl pb-14 px-4 md:py-14"
+>
   <h1
     class="md:mt-20 font-extrabold absolute md:relative pl-2 left-16 md:left-0 fadeOpacity -top-16 md:top-0 text-yellow md:text-blue pb-8 article-text"
   >
@@ -7,8 +10,8 @@
   <div
     class="fadeIn grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8"
   >
-    <app-article
-      *ngFor="let article of [1, 2, 3, 4, 5, 6, 7, 8, 9]"
-    ></app-article>
+    <div *ngFor="let article of articles.items">
+      <app-article [article]="article"></app-article>
+    </div>
   </div>
 </div>

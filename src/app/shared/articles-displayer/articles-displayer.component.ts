@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ContentfulService } from 'src/app/services/contentful.service';
 
 @Component({
@@ -9,11 +10,8 @@ import { ContentfulService } from 'src/app/services/contentful.service';
 export class ArticlesDisplayerComponent implements OnInit {
   constructor(private contentfulService: ContentfulService) {}
 
-  articles: any;
+  articles$: Observable<any> | undefined;
   ngOnInit(): void {
-    this.articles = this.contentfulService.getAllEntries().then((response) => {
-      console.log(response);
-      return response;
-    });
+    this.articles$ = this.contentfulService.getAllEntries() as Observable<any>;
   }
 }

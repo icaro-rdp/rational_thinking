@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { createClient, Entry } from 'contentful';
+import { from } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -14,9 +15,7 @@ export class ContentfulService {
   });
 
   getAllEntries() {
-    return this.client.getEntries().then((response) => {
-      console.log(response);
-      return response.items;
-    });
+    const promise = this.client.getEntries();
+    return from(promise);
   }
 }
