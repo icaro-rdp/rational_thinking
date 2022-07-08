@@ -4,7 +4,7 @@ export interface article {
   title: string;
   description: string;
   image: string;
-  link: string;
+  publicationDate: string;
 }
 
 @Component({
@@ -16,9 +16,21 @@ export class ArticleComponent implements OnInit {
   constructor() {}
   @Input() article: any = {};
 
+  parsedArticle: article = {
+    title: '',
+    description: '',
+    image: '',
+    publicationDate: '',
+  };
   ngOnInit(): void {
-    if (this.article !== undefined) {
-      console.log(this.article.fields.background.fields.file.url);
-    }
+    console.log(this.article);
+    this.parsedArticle = {
+      title: this.article.fields.title,
+      description: this.article.fields.description,
+      image: this.article.fields.background
+        ? this.article.fields.background.fields.file.url
+        : '',
+      publicationDate: this.article.fields.publicationDate,
+    };
   }
 }
