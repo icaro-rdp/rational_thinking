@@ -1,3 +1,23 @@
 {
-    "tailwindCSS.experimental.configFile": "/tailwind.config.js"
+  "tailwindCSS.experimental.configFile": "/tailwind.config.js",
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#4a85c3",
+    "activityBar.activeBorder": "#e7b7cf",
+    "activityBar.background": "#4a85c3",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#e7b7cf",
+    "activityBarBadge.foreground": "#15202b",
+    "sash.hoverBorder": "#4a85c3",
+    "statusBar.background": "#366ca4",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#4a85c3",
+    "statusBarItem.remoteBackground": "#366ca4",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#366ca4",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#366ca499",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#366ca4"
 }
