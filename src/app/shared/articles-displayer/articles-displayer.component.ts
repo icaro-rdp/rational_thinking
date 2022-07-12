@@ -11,7 +11,7 @@ export class ArticlesDisplayerComponent implements OnInit {
   constructor(private contentfulService: ContentfulService) {}
 
   results$: Observable<any> | undefined;
-  articles: any;
+
   ngOnInit(): void {
     this.results$ = this.contentfulService.getAllEntries();
   }

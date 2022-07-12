@@ -1,11 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-export interface article {
-  title: string;
-  description: string;
-  image: string;
-  publicationDate: string;
-}
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-article',
@@ -13,17 +7,11 @@ export interface article {
   styleUrls: ['./article.component.scss'],
 })
 export class ArticleComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
   @Input() article: any = {};
 
-  parsedArticle: article = {
-    title: '',
-    description: '',
-    image: '',
-    publicationDate: '',
-  };
+  parsedArticle: any = {};
   ngOnInit(): void {
-    console.log(this.article);
     this.parsedArticle = {
       title: this.article.fields.title,
       description: this.article.fields.description,
@@ -31,6 +19,12 @@ export class ArticleComponent implements OnInit {
         ? this.article.fields.background.fields.file.url
         : '',
       publicationDate: this.article.fields.publicationDate,
+      id: this.article.sys.id,
     };
+  }
+  // change route to article details page
+  changeRoute(id: string) {
+    console.log(id);
+    this.router.navigate(['/articles', id]);
   }
 }

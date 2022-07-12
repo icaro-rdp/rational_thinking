@@ -13,9 +13,10 @@
         <div class="flex justify-left md:justify-center w-full align-top">
           <label class="entrance-text hidden md:block">RATI</label>
           <img
+            [routerLink]="'home'"
             src="../assets/images/brainLogo.png"
             alt="logo"
-            class="animate-pulse entrance-icon relative top-2 -right-4 md:right-0 w-16 h-16 md:w-10 md:h-10 lg:w-10 lg:h-10"
+            class="hover:cursor-pointer animate-pulse entrance-icon relative top-2 -right-4 md:right-0 w-16 h-16 md:w-10 md:h-10 lg:w-10 lg:h-10"
           />
           <label class="entrance-text hidden md:block">NALITY</label>
         </div>
@@ -33,11 +34,12 @@
         </div>
       </button>
     </div>
+
     <div
       *ngIf="!menuStatus"
       class="z-50 md:z-0 bg-blue md:bg-transparent grid place-items-center text-4xl text-blue flex sticky h-full w-full"
     >
-      <app-articles-displayer></app-articles-displayer>
+      <router-outlet></router-outlet>
     </div>
   </div>
   <div
