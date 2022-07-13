@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { MenuComponent } from './home/menu/menu.component';
 import { ArticleDetailsComponent } from './home/articles-displayer/article/article-details/article-details.component';
 import { ArticlesDisplayerComponent } from './home/articles-displayer/articles-displayer.component';
 
