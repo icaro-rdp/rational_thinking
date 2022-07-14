@@ -3,29 +3,25 @@
     <app-menu [isOpen]="menuStatus"></app-menu>
   </div>
   <div
-    class="relative dark:bg-black dark:md:bg-opacity-100 bg-blue md:bg-opacity-10 relative header w-full h-full justify-start"
+    class="relative dark:bg-dark-blue dark:md:bg-opacity-10 relative header w-full h-full justify-start"
   >
     <div class="z-50 bg-transparent flex sticky md:fixed h-20 w-full">
       <div
         [ngClass]="!menuStatus ? 'open' : ' closed'"
-        class="navbar bg-yellow dark:bg-black relative flex flex-col text text-blue dark:text-yellow w-full"
+        class="navbar relative flex flex-col text text-blue w-full"
       >
         <div class="flex justify-left md:justify-center w-full align-top">
           <label class="entrance-text hidden md:block">RATI</label>
           <img
             [routerLink]="'home'"
-            [src]="
-              dark
-                ? '../assets/images/brainLogo.png'
-                : '../assets/images/brainLogoDark.png'
-            "
+            [src]="'../assets/images/brainLogoDark.png'"
             alt="logo"
             class="hover:cursor-pointer animate-pulse entrance-icon relative top-2 -right-4 md:right-0 w-16 h-16 md:w-10 md:h-10 lg:w-10 lg:h-10"
           />
           <label class="entrance-text hidden md:block">NALITY</label>
         </div>
         <label
-          class="entrance-subtext hidden md:flex relative -top-2 flex justify-center w-full text-xs text-left text-light-blue dark:text-lime"
+          class="entrance-subtext hidden md:flex relative -top-2 flex justify-center w-full text-xs text-left text-light-blue"
           >Rationality is the Key</label
         >
       </div>
@@ -41,7 +37,7 @@
 
     <div
       *ngIf="!menuStatus"
-      class="z-50 md:z-0 md:bg-transparent grid place-items-center text-4xl bg-blue flex sticky h-full w-full"
+      class="z-50 md:z-0 md:bg-transparent grid place-items-center text-4xl flex sticky h-full w-full"
     >
       <router-outlet></router-outlet>
     </div>
