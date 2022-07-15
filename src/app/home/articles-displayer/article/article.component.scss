@@ -16,7 +16,9 @@ article:hover .img {
   filter: grayscale(0%);
 }
 article .img {
-  background-size: cover;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
   border-bottom: 4px solid #fff;
   filter: grayscale(80%);
 }
