@@ -1,6 +1,14 @@
-<div class="h-full w-full min-h-screen mt-20">
+<div class="relative -top-20 h-full w-full min-h-screen mt-20">
   <div *ngIf="article$ | async; else spinner">
-    <div id="sectionOne"></div>
+    <div id="sectionOne">
+      <img
+        src="{{ article.image.url }}"
+        alt="{{ article.image.description }}"
+        class="w-full h-screen"
+      />
+      <h1>{{ article.title }}</h1>
+      <div [innerHtml]="_returnHtmlFromRichText(article.content)"></div>
+    </div>
     <div id="sectionTwo"></div>
   </div>
 </div>
