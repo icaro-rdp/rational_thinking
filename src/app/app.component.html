@@ -2,10 +2,8 @@
   <div class="w-full h-full fixed">
     <app-menu [isOpen]="menuStatus"></app-menu>
   </div>
-  <div
-    class="relative bg-dark-blue bg-opacity-20 relative header w-full h-full justify-start"
-  >
-    <div class="z-50 bg-transparent flex sticky md:fixed h-20 w-full">
+  <div class="relative relative header w-full h-full justify-start">
+    <div class="z-50 flex stycky md:fixed h-20 w-full">
       <div
         [ngClass]="!menuStatus ? 'open' : ' closed'"
         class="navbar relative flex flex-col text text-blue w-full"

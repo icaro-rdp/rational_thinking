@@ -41,10 +41,21 @@ $yellow: #d7f205;
 .closed {
   transform: translate(100%, 0%);
 }
-.navbar.open {
+.open {
+  background-color: transparent;
   transform: translateX(0);
 }
 
 .navbar {
-  transition: all 0.3s ease-in-out;
+  background-color: yellow;
+  transition: translate 0.3s ease-in-out;
+}
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-top-scroller',
@@ -8,7 +8,7 @@ import { Component, HostListener } from '@angular/core';
 export class TopScrollerComponent {
   constructor() {}
 
-  isScrolled: boolean = false;
+  @Input() isScrolled: boolean = false;
   // function to check if page is scrolled
   @HostListener('window:scroll', ['$event'])
   onScroll() {

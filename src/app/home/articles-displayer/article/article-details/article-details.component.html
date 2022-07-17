@@ -1,7 +1,21 @@
 <div class="relative h-full w-full min-h-screen">
   <div *ngIf="article$ | async; else spinner">
-    <button routerLink="/home" class="absolute top-20 left-0 z-10">
-      Visita Tutti gli articoli
+    <button
+      routerLink="/home"
+      class="hover:scale-110 transition-all duration-300 absolute rounded-full top-24 left-0 z-10 mx-8 sticky"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-12 w-12 text-yellow bg-blue rounded-full"
+        viewBox="0 0 20 20"
+        fill="yellow"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z"
+          clip-rule="evenodd"
+        />
+      </svg>
     </button>
     <div class="wrapper">
       <header>
@@ -14,7 +28,6 @@
       </header>
       <section [innerHtml]="_returnHtmlFromRichText(article.content)"></section>
     </div>
-    <div id="sectionTwo"></div>
   </div>
 </div>
 <ng-template #spinner>
