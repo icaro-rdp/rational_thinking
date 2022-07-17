@@ -1,13 +1,18 @@
-<div class="relative -top-20 h-full w-full min-h-screen mt-20">
+<div class="relative h-full w-full min-h-screen">
   <div *ngIf="article$ | async; else spinner">
-    <div id="sectionOne">
-      <img
-        src="{{ article.image.url }}"
-        alt="{{ article.image.description }}"
-        class="w-full h-screen"
-      />
-      <h1>{{ article.title }}</h1>
-      <div [innerHtml]="_returnHtmlFromRichText(article.content)"></div>
+    <button routerLink="/home" class="absolute top-20 left-0 z-10">
+      Visita Tutti gli articoli
+    </button>
+    <div class="wrapper">
+      <header>
+        <img
+          src="{{ article.image.url }}"
+          alt="{{ article.image.description }}"
+          class="background"
+        />
+        <h1 class="title">{{ article.title }}</h1>
+      </header>
+      <section [innerHtml]="_returnHtmlFromRichText(article.content)"></section>
     </div>
     <div id="sectionTwo"></div>
   </div>
