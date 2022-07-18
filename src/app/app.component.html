@@ -3,7 +3,7 @@
     <app-menu [isOpen]="menuStatus"></app-menu>
   </div>
   <div class="relative relative header w-full h-full justify-start">
-    <div class="z-40 flex sticky h-20 w-full">
+    <div class="z-40 flex sticky h-20 w-full overflow-hidden">
       <div
         [ngClass]="!menuStatus ? 'open' : ' closed'"
         class="relative flex flex-col text text-blue w-full h-20"

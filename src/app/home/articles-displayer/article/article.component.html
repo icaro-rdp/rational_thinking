@@ -1,7 +1,7 @@
 <article
   class="relative cursor-pointer rounded-md group mt-6 sm:mt-[1.875rem] md:mt-[2.25rem] lg:mt-[2.625rem] xl:mt-[3rem] transition duration-200 ease-in-out shadow-md hover:shadow-blue"
 >
-  <div class="h-full aspect-[16/9] overflow-hidden w-full rounded-t-md">
+  <div class="md:h-72 aspect-[16/9] overflow-hidden w-full rounded-t-md">
     <div
       class="img h-full"
       [ngStyle]="{ 'background-image': 'url(' + parsedArticle.image + ')' }"
@@ -17,9 +17,7 @@
       (click)="changeRoute(parsedArticle.id)"
       class="w-fit rounded border-2 text-sm text-ellipsis overflow-hidden max-h-full text-opacity-80 text-blue"
     >
-      <p class="text-sm font-extrabold px-2 py-4 w-fit">
-        Vai all' articolo
-      </p>
+      <p class="text-sm font-extrabold px-2 py-4 w-fit">Vai all' articolo</p>
     </button>
   </div>
   <!-- notifica nuovo articolo -->
