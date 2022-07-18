@@ -7,6 +7,7 @@ interface DetailedArticle {
   title: string;
   content: string;
   isNew: boolean;
+  description: string;
   image: {
     url: string;
     description: string;
@@ -27,6 +28,7 @@ export class ArticleDetailsComponent implements OnInit {
   article: DetailedArticle = {
     title: '',
     content: '',
+    description: '',
     isNew: false,
     image: { url: '', description: '' },
   };
@@ -36,6 +38,7 @@ export class ArticleDetailsComponent implements OnInit {
     return {
       title: article.fields.title,
       content: article.fields.content,
+      description: article.fields.description,
       isNew: true,
       image: {
         url: !article.fields.background
