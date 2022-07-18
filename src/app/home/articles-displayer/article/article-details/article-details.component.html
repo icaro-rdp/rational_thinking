@@ -1,32 +1,20 @@
 <div class="relative h-full w-full min-h-screen">
   <div *ngIf="article$ | async; else spinner">
-    <button
-      routerLink="/home"
-      class="hover:scale-110 transition-all duration-300 absolute rounded-full top-24 left-0 z-10 mx-8 sticky"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-12 w-12 text-yellow bg-blue rounded-full"
-        viewBox="0 0 20 20"
-        fill="yellow"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </button>
-    <div class="wrapper">
-      <header>
+    <div>
+      <header class="relative flex text-center w-full">
         <img
+          class="relative h-screen w-full object-cover"
           src="{{ article.image.url }}"
           alt="{{ article.image.description }}"
-          class="background"
         />
-        <h1 class="title">{{ article.title }}</h1>
+        <h1 class="title text-ellipsis text-6xl">
+          {{ article.title | uppercase }}
+        </h1>
       </header>
-      <section [innerHtml]="_returnHtmlFromRichText(article.content)"></section>
+      <section
+        class="mx-auto px-4"
+        [innerHtml]="_returnHtmlFromRichText(article.content)"
+      ></section>
     </div>
   </div>
 </div>

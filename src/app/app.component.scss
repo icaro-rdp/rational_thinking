@@ -39,17 +39,19 @@ $yellow: #d7f205;
 }
 
 .closed {
-  transform: translate(100%, 0%);
+  background-color: white;
+  transform: translate(100%);
 }
+
 .open {
   background-color: transparent;
   transform: translateX(0);
 }
 
 .navbar {
-  background-color: yellow;
-  transition: translate 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
+
 .wrapper::-webkit-scrollbar {
   display: none;
 }

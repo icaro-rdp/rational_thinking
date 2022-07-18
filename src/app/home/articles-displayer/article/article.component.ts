@@ -56,6 +56,6 @@ export class ArticleComponent implements OnInit {
 
   // change route to article details page
   changeRoute(id: string) {
-    this.router.navigate(['/articles', id]);
+    this.router.navigate(['/article', id]);
   }
 }

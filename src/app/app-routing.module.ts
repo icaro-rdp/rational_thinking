@@ -5,7 +5,7 @@ import { ArticlesDisplayerComponent } from './home/articles-displayer/articles-d
 
 const routes: Routes = [
   { path: 'home', component: ArticlesDisplayerComponent },
-  { path: 'articles/:id', component: ArticleDetailsComponent },
+  { path: 'article/:id', component: ArticleDetailsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home' },
 ];
