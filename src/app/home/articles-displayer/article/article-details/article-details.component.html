@@ -3,7 +3,7 @@
     <header class="relative w-screen h-screen">
       <div class="relative h-2/3 md:h-2/3 lg:h-1/2 bg-blue_background">
         <h1
-          class="W-fit text-[3rem] md:text-[5rem] overflow-hidden top-20 underline decoration-2 underline-offset-8 decoration-lime text-white font-thin mx-8"
+          class="w-fit text-[3rem] md:text-[5rem] overflow-hidden top-20 underline decoration-2 underline-offset-8 decoration-lime text-white font-thin mx-8"
         >
           {{ article.title | titlecase }}
         </h1>
@@ -24,7 +24,7 @@
     >
       <section
         class="prose lg:prose-2xl px-8 py-64"
-        [innerHtml]="_returnHtmlFromRichText(article.content)"
+        [innerHtml]="_returnHtmlFromRichText(article.content) | markdown"
       ></section>
     </article>
   </div>

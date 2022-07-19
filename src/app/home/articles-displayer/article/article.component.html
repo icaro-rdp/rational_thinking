@@ -1,11 +1,8 @@
 <article
-  class="relative cursor-pointer rounded-md group mt-6 sm:mt-[1.875rem] md:mt-[2.25rem] lg:mt-[2.625rem] xl:mt-[3rem] transition duration-200 ease-in-out shadow-md hover:shadow-blue"
+  class="w-full relative cursor-pointer rounded-md group mt-6 sm:mt-[1.875rem] md:mt-[2.25rem] lg:mt-[2.625rem] xl:mt-[3rem] transition duration-200 ease-in-out shadow-md hover:shadow-blue"
 >
-  <div class="md:h-72 aspect-[16/9] overflow-hidden w-full rounded-t-md">
-    <div
-      class="img h-full"
-      [ngStyle]="{ 'background-image': 'url(' + parsedArticle.image + ')' }"
-    ></div>
+  <div class="w-fit overflow-hidden rounded-t-md">
+    <img class="img overflow-x-clip w-fit" [src]="parsedArticle.image" />
   </div>
   <div class="h-48 flex flex-col pt-6 pb-6 px-6 gap-4">
     <div

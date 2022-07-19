@@ -25,6 +25,7 @@ export class ArticleDetailsComponent implements OnInit {
   ) {}
 
   article$: Observable<any> | undefined;
+
   article: DetailedArticle = {
     title: '',
     content: '',
@@ -65,7 +66,6 @@ export class ArticleDetailsComponent implements OnInit {
     let params = this.activatedRoute.snapshot.params;
     this.article$ = this.contentfulService.getEntry(params['id']);
     this.article$.subscribe((article) => {
-      console.log(article);
       this.article = this.createDetailedArticle(article);
     });
   }
