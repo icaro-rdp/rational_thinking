@@ -22,15 +22,13 @@
         </div>
       </div>
     </header>
-    <article
-      class="absolute w-full top-[70%] md:top-[55%] lg:top-[54%] flex bg-[#d6f2050b] justify-center"
-    >
-      <section
-        class="px-8 my-40 prose sm:prose-sm md:prose-md lg:prose-lg md:my-64 lg:my-24 xl:my-64 lg:prose-2xl"
-        [innerHtml]="_returnHtmlFromRichText(article.content) | markdown"
-      ></section>
-    </article>
   </div>
+  <article class="flex justify-center w-full -translate-y-96">
+    <section
+      class="w-full px-8 my-64 lg:max-w-screen-md md:max-w-screen-xs xl:max-w-screen-lg sm:my-48 md:my-40 prose-base w-fit sm:prose-sm md:prose-md lg:prose-lg md:my-64 lg:my-0 xl:my-40 lg:prose-2xl"
+      [innerHtml]="_returnHtmlFromRichText(article.content) | markdown"
+    ></section>
+  </article>
 </div>
 <ng-template #spinner>
   <div class="absolute inset-x-1/2 top-1/3 w-fit h-fit">
