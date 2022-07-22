@@ -1,0 +1,14 @@
+<div
+  [ngClass]="isOpen ? 'open' : 'closed'"
+  class="bg-blue_background menu h-screen w-screen top-0 right-0 flex justify-center align-middle items-center opacity-100"
+>
+  <ul class="flex w-fit text-center flex-col text-4xl gap-4">
+    <li
+      *ngFor="let item of menu"
+      [routerLink]="item.link"
+      class="bg-animated-text cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-yellow to-yellow leading-normal font-semibold font-mono transition ease-in-out delay-75 hover:odd:translate-x-4 hover:even:-translate-x-4 hover:odd:skew-y-2 hover:even:-skew-y-2 hover:scale-105 hover:duration-200"
+    >
+      {{ item.name | titlecase }}
+    </li>
+  </ul>
+</div>

@@ -2,42 +2,39 @@
   <div class="w-full h-full fixed">
     <app-menu [isOpen]="menuStatus"></app-menu>
   </div>
-  <div
-    class="relative md:bg-blue md:bg-opacity-10 relative header w-full h-full justify-start"
-  >
-    <div class="z-50 bg-transparent flex sticky md:fixed h-20 w-full">
+  <div class="relative header w-full h-full justify-start">
+    <div class="z-40 sticky h-20 w-full overflow-hidden">
       <div
         [ngClass]="!menuStatus ? 'open' : ' closed'"
-        class="navbar bg-blue relative flex flex-col text text-yellow w-full"
+        class="relative flex flex-col text text-blue w-full h-20"
       >
         <div class="flex justify-left md:justify-center w-full align-top">
           <label class="entrance-text hidden md:block">RATI</label>
           <img
-            src="../assets/images/brainLogo.png"
+            [routerLink]="'home'"
+            [src]="'../assets/images/brainLogoDark.png'"
             alt="logo"
-            class="animate-pulse entrance-icon relative top-2 -right-4 md:right-0 w-16 h-16 md:w-10 md:h-10 lg:w-10 lg:h-10"
+            class="hover:cursor-pointer animate-pulse entrance-icon relative top-2 -right-4 md:right-0 w-16 h-16 md:w-10 md:h-10 lg:w-10 lg:h-10"
           />
           <label class="entrance-text hidden md:block">NALITY</label>
         </div>
         <label
-          class="entrance-subtext hidden md:flex relative -top-2 flex justify-center w-full text-xs text-left text-lime"
+          class="entrance-subtext hidden md:flex relative -top-2 flex justify-center w-full text-xs text-left text-light-blue"
           >Rationality is the Key</label
         >
       </div>
       <button
         (click)="openMenu()"
-        class="h-full absolute right-0 flex justify-end"
+        class="h-full z-[1000] absolute top-0 right-0 flex justify-end"
       >
-        <div class="entrance-button z-50">
+        <div class="entrance-button">
           <app-burger [isOpen]="menuStatus"></app-burger>
         </div>
       </button>
     </div>
-    <div
-      *ngIf="!menuStatus"
-      class="z-50 md:z-0 bg-blue md:bg-transparent grid place-items-center text-4xl text-blue flex sticky h-full w-full"
-    >
-      <app-articles-displayer> </app-articles-displayer>
+
+    <div *ngIf="!menuStatus">
+      <router-outlet></router-outlet>
     </div>
   </div>
   <div

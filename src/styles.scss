@@ -2,3 +2,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "rationality-font";
+  src: url("./assets/font/Sk-Modernist-Regular.otf") format("opentype");
+}
+
+* {
+  font-family: "rationality-font" !important;
+}
+
+body {
+  background-color: #d6f2050c;
+  opacity: 10;
+}

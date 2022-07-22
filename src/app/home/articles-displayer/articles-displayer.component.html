@@ -1,0 +1,17 @@
+<div
+  *ngIf="results$ | async as results"
+  class="relative flex flex-col items-baseline max-w-[90%] pb-14 mx-auto md:py-14"
+>
+  <h1
+    class="absolute w-full pb-8 pl-2 text-4xl font-extrabold text-left md:relative left-20 md:left-0 fadeOpacity -top-16 md:top-0 text-blue article-text"
+  >
+    Articoli
+  </h1>
+  <div
+    class="grid grid-cols-1 px-4 fadeIn md:grid-cols-2 lg:grid-cols-3 md:px-4 gap-x-6 gap-y-8"
+  >
+    <div class="w-full" *ngFor="let article of results.items; let i = index">
+      <app-article [article]="article"></app-article>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="w-full h-full min-h-screen">
+  <div *ngIf="article$ | async; else spinner">
+    <header class="relative w-full h-screen">
+      <div class="relative h-2/3 md:h-1/2 bg-blue_background">
+        <h1
+          class="w-fit text-[3rem] xl:text-[5rem] overflow-hidden top-20 underline decoration-2 underline-offset-8 decoration-lime text-white font-thin mx-8"
+        >
+          {{ article.title | titlecase }}
+        </h1>
+        <p
+          [innerHTML]="article.description | markdown"
+          class="w-full px-8 mt-6 text-lg font-thin text-white underline md:mt-6 lg:pt-0 xl:pt-6 lg:text-xl xl:text-2xl prose-strong:font-bold lg:absolute lg:w-1/3 lg:top-1/3 xl:top-1/3 lg:right-0 decoration-lime underline-offset-2 md:underline-offset-4"
+        ></p>
+        <div
+          class="absolute w-full lg:w-[50%] xl:w-[40%] flex justify-center -bottom-[25%] sm:-bottom-[10%] md:-bottom-[45%] lg:bottom-[10%] xl:-bottom-[35%]"
+        >
+          <img
+            class="object-cover w-11/12 border rounded-lg md:w-10/12 lg:w-11/12 border-yellow lg:ml-8 xl:ml-0 md:h-1/3 aspect-video"
+            src="{{ article.image.url }}"
+            alt="{{ article.image.description }}"
+          />
+        </div>
+      </div>
+    </header>
+    <article
+      class="absolute w-full top-[70%] md:top-[55%] lg:top-[54%] flex bg-[#d6f2050b] justify-center"
+    >
+      <section
+        class="px-8 my-40 prose sm:prose-sm md:prose-md lg:prose-lg md:my-64 lg:my-24 xl:my-64 lg:prose-2xl"
+        [innerHtml]="_returnHtmlFromRichText(article.content) | markdown"
+      ></section>
+    </article>
+  </div>
+</div>
+<ng-template #spinner>
+  <div class="absolute inset-x-1/2 top-1/3 w-fit h-fit">
+    <spinner></spinner>
+  </div>
+</ng-template>

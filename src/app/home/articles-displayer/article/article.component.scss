@@ -1,0 +1,48 @@
+@import "colors";
+
+article {
+  font-family: "rationality-font", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+article .img {
+  transition: all 0.5s ease-in-out;
+}
+article:hover {
+  transform: translateY(-5px);
+}
+button p:hover {
+  background-color: $blue;
+  backdrop-filter: blur(5px);
+  color: $yellow;
+}
+button:hover {
+  transform: translateY(-5px);
+}
+button p,
+button {
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+article:hover .img {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+article .img {
+  filter: grayscale(80%);
+}
+
+// notification style
+@keyframes notification {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.notification {
+  animation: notification 1.25s ease-in-out infinite;
+}
