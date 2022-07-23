@@ -1,4 +1,4 @@
-<div class="w-full h-full min-h-screen">
+<!-- <div class="w-full h-full min-h-screen">
   <div *ngIf="article$ | async; else spinner">
     <header class="relative w-full h-screen">
       <div class="relative h-2/3 md:h-1/2 bg-blue_background">
@@ -29,21 +29,36 @@
       [innerHtml]="_returnHtmlFromRichText(article.content) | markdown"
     ></section>
   </article>
+</div> -->
+
+<div
+  class="grid w-full detail-container bg-blue_background realtive h-fit place-items-center gap-y-8 lg:place-items-start"
+>
+  <h1
+    class="title underline leading-tight decoration-2 underline-offset-8 decoration-lime text-white font-thin text-[3rem] xl:text-[5rem] px-8 py-8 text-3xl"
+  >
+    {{ article.title | titlecase }}
+  </h1>
+  <p
+    [innerHTML]="article.description | markdown"
+    class="px-8 text-lg font-thin text-white underline description decoration-lime underline-offset-2"
+  ></p>
+  <div class="image max-w-2xl translate-y-[20%] px-8">
+    <img
+      class="object-cover border-2 rounded-lg aspect-video border-yellow"
+      src="{{ article.image.url }}"
+      alt="{{ article.image.description }}"
+    />
+  </div>
 </div>
+<article class="article translate-y-[5%] flex justify-center mx-8">
+  <section
+    class="prose prose-slate lg:prose-xl"
+    [innerHtml]="_returnHtmlFromRichText(article.content) | markdown"
+  ></section>
+</article>
 <ng-template #spinner>
   <div class="absolute inset-x-1/2 top-1/3 w-fit h-fit">
     <spinner></spinner>
   </div>
 </ng-template>
-
-<!-- 
-<div class="grid w-full bg-blue-100 realtive h-96 place-items-center gap-y-2 lg:place-items-start">
-  <div class="px-8 py-8 text-3xl">Percezioni</div>
-  <p class="px-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore deserunt architecto aspernatur ullam tenetur dolorem. Cupiditate consequatur vitae voluptas, molestiae blanditiis ea quaerat ratione molestias veritatis unde necessitatibus tempora ipsam!</p>
-  <div class="max-w-2xl translate-y-[25%] px-8">
-    <img class="aspect-video" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="" />
-  </div>
-</div>
-<article>
-  
-</article> -->

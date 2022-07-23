@@ -66,6 +66,8 @@ export class ArticleDetailsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    // get navbar element and change bg-color
+
     let params = this.activatedRoute.snapshot.params;
     this.article$ = this.contentfulService.getEntry(params['id']);
 

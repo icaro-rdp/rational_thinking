@@ -1,25 +1,25 @@
 <div>
-  <div class="w-full h-full fixed">
+  <div class="fixed w-full h-full">
     <app-menu [isOpen]="menuStatus"></app-menu>
   </div>
-  <div class="relative header w-full h-full justify-start">
-    <div class="z-40 sticky h-20 w-full overflow-hidden">
+  <div class="relative justify-start w-full h-full header">
+    <div class="sticky z-40 w-full h-20 overflow-hidden">
       <div
         [ngClass]="!menuStatus ? 'open' : ' closed'"
-        class="relative flex flex-col text text-blue w-full h-20"
+        class="relative flex flex-col w-full h-20 text text-blue"
       >
-        <div class="flex justify-left md:justify-center w-full align-top">
-          <label class="entrance-text hidden md:block">RATI</label>
+        <div class="flex w-full align-top justify-left md:justify-center">
+          <label class="hidden entrance-text md:block">RATI</label>
           <img
             [routerLink]="'home'"
             [src]="'../assets/images/brainLogoDark.png'"
             alt="logo"
-            class="hover:cursor-pointer animate-pulse entrance-icon relative top-2 -right-4 md:right-0 w-16 h-16 md:w-10 md:h-10 lg:w-10 lg:h-10"
+            class="relative w-16 h-16 hover:cursor-pointer animate-pulse entrance-icon top-2 -right-4 md:right-0 md:w-10 md:h-10 lg:w-10 lg:h-10"
           />
-          <label class="entrance-text hidden md:block">NALITY</label>
+          <label class="hidden entrance-text md:block">NALITY</label>
         </div>
         <label
-          class="entrance-subtext hidden md:flex relative -top-2 flex justify-center w-full text-xs text-left text-light-blue"
+          class="relative flex justify-center hidden w-full text-xs text-left entrance-subtext md:flex -top-2 text-light-blue"
           >Rationality is the Key</label
         >
       </div>
