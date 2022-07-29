@@ -1,5 +1,5 @@
 {
-  "tailwindCSS.experimental.configFile": "/tailwind.config.js",
+  "tailwindCSS.experimental.configFile": null,
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#4a85c3",
     "activityBar.activeBorder": "#e7b7cf",
